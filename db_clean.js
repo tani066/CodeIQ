@@ -1,0 +1,1 @@
+const { PrismaClient } = require("@prisma/client"); const prisma = new PrismaClient(); async function run() { await prisma.$executeRawUnsafe(`DELETE FROM "Analysis"`); } run().then(()=>console.log("Deleted")).catch(console.error).finally(()=>prisma.$disconnect());
