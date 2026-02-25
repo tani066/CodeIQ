@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
 
 const razorpay = new Razorpay({
-    key_id: process.env.RAZORPAY_KEY_ID || "mock_key_id",
+    key_id: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "mock_key_id",
     key_secret: process.env.RAZORPAY_KEY_SECRET || "mock_key_secret",
 });
 

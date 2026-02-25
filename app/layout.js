@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Viva Defender | Tech Interview Prep",
+  title: "CodeIQ | Tech Interview Prep",
   description: "AI-powered technical interview defense strategy generator.",
 };
 

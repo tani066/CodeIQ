@@ -11,6 +11,7 @@ import { Loader } from "@/components/ui/loader";
 import { cn } from "@/lib/utils";
 import { SignInButton, SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs'
 import AnalysisReport from "@/components/ui/analysis-report";
+import Image from "next/image";
 
 export default function Home() {
   const { user } = useUser();
@@ -111,10 +112,17 @@ export default function Home() {
       {/* Navbar */}
       <nav className="border-b border-border/40 bg-background/80 backdrop-blur-md sticky top-0 z-50">
         <div className="container flex h-16 max-w-screen-2xl items-center px-6 justify-between">
-          <div className="flex items-center gap-2 font-bold text-neon-green text-xl tracking-wider">
+          {/* <div className="flex items-center gap-2 font-bold text-neon-green text-xl tracking-wider">
             <ShieldCheck className="h-6 w-6" />
-            <span>Viva Defender</span>
-          </div>
+            <span>CodeIQ</span>
+          </div> */}
+          <Image
+            src="/logo.png"
+            alt="CodeIQ Logo"
+            width={100}
+            height={100}
+            className="mr-3"
+          />
           <div className="flex items-center gap-4">
             <SignedOut>
               <SignInButton mode="modal">
