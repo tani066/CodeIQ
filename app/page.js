@@ -131,10 +131,13 @@ export default function Home() {
             </SignedOut>
             <SignedIn>
               {tokens !== null && (
-                <div className="px-3 py-1.5 mr-2 bg-black/40 border border-neon-green/30 rounded-md flex items-center gap-2">
+                <button
+                  onClick={() => window.location.href = "/pricing"}
+                  className="px-3 py-1.5 mr-2 bg-black/40 hover:bg-black/60 transition-colors cursor-pointer border border-neon-green/30 rounded-md flex items-center gap-2"
+                >
                   <div className="w-2 h-2 rounded-full bg-neon-green"></div>
                   <span className="text-sm font-medium text-white">{tokens} Tokens</span>
-                </div>
+                </button>
               )}
               <Button variant="ghost" className="text-muted-foreground hover:text-white hover:bg-white/10 mr-2" onClick={() => window.location.href = '/dashboard'}>Dashboard</Button>
               <UserButton
